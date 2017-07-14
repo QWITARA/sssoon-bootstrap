@@ -1,0 +1,111 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+html, body {
+  position: relative;
+  z-index: -1;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+.navbar {
+  padding: 20px 0;
+  a {
+    font-size: 1.2em;
+    opacity: 0.7;
+  }
+  a:hover{
+    opacity: 1;
+  }
+  .fa.fa-lg {
+  vertical-align: -5%;
+  }
+}
+.page {
+  position: relative;
+  z-index: -1;
+  min-height: 100%;
+  background: #000000 url(../images/bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.page:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+}
+.content {
+  padding-top: 9em;
+  text-align: center;
+}
+.logo {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 6em;
+}
+.motto {
+  margin-top: 1.7em;
+  font-size: 2em;
+}
+.subscribe {
+  margin-top: 11em;
+}
+.subscribe-text {
+  margin: 1.5em 0;
+  font-size: 1.3em;
+}
+.form-control, .btn {
+  height: 38px;
+  border-radius: 0;
+  color: #ffffff;
+}
+.form-inline .form-control {
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn-danger:hover {
+  background-color: /*#d9534f*/ lighten(@btn-danger-bg, 5%);
+  border-color: lighten(@btn-danger-bg, 5%);
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  text-align: right;
+  color: #aaaaaa;
+}
+.fa-heart {
+  color: @btn-danger-bg;
+}
+@media (max-width:767px) {
+  .navbar {
+    padding: 10px 0;
+  }
+  .navbar-default {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .navbar-nav>li>a {
+    padding: 30px 15px;
+  }
+  .form-inline .form-control, .btn-danger {
+    width: 100%;
+  }
+  .motto {
+    margin-top: 1.2em;
+    font-size: 1.7em;
+}
+  .subscribe {
+    margin-top: 5em;
+  }
+  footer {
+    position: static;
+  }
+}
